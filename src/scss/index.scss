@@ -2,6 +2,23 @@
 @import './utils/fonts.scss';
 @import './utils/vars.scss';
 
+.link {
+    position: absolute;
+    width: 5.28vw;
+    max-width: 60px;
+    height: 2.11vw;
+    max-height: 24px;
+    background: no-repeat center / 100% url("@img/GitHub.png");
+    z-index: 1;
+    opacity: .5;
+    &:hover {
+        opacity: .75
+    }
+    &:active {
+        opacity: 1
+    }
+}
+
 .wrapper {
     max-width: 1136px;
     max-height: 640px;
