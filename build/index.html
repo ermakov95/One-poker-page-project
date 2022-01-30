@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Poker</title>
+    <meta name="description" content="Poker">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.min.css?_v=20220130195141">
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="left">
+        <div class="left-title">Входной взнос</div>
+        <div class="menu">
+          <button class="menu-button main-menu-btn"><img class="menu-button__img" src="./img/logo_chip.png" alt="Покерная фишка">
+            <div class="menu-button__text"><span class="menu-button__bet">Выберите уровень МБ/ББ</span><br><span class="menu-button__poker">Выберите игру</span></div>
+          </button>
+          <ul class="menu-list">
+            <li class="menu-item" data-item="FL-H">
+              <button class="menu-button sub-menu-btn"><img class="menu-button__img" src="./img/logo_chip.png" alt="Покерная фишка">
+                <div class="menu-button__text">ФЛ Холдем</div>
+              </button>
+            </li>
+            <li class="menu-item" data-item="NL-H">
+              <button class="menu-button sub-menu-btn"><img class="menu-button__img" src="./img/logo_chip.png" alt="Покерная фишка">
+                <div class="menu-button__text">НЛ Холдем</div>
+              </button>
+            </li>
+            <li class="menu-item" data-item="FL-O">
+              <button class="menu-button sub-menu-btn"><img class="menu-button__img" src="./img/logo_chip.png" alt="Покерная фишка">
+                <div class="menu-button__text">ФЛ Омаха</div>
+              </button>
+            </li>
+            <li class="menu-item" data-item="NL-O">
+              <button class="menu-button sub-menu-btn"><img class="menu-button__img" src="./img/logo_chip.png" alt="Покерная фишка">
+                <div class="menu-button__text">НЛ Омаха</div>
+              </button>
+            </li>
+          </ul>
+          <ul class="sub-menu">
+            <li class="sub-menu__item" data-item="5/10">
+              <button class="sub-menu__button">5/10</button>
+            </li>
+            <li class="sub-menu__item" data-item="10/20">
+              <button class="sub-menu__button">10/20</button>
+            </li>
+            <li class="sub-menu__item" data-item="25/50">
+              <button class="sub-menu__button">25/50</button>
+            </li>
+            <li class="sub-menu__item" data-item="50/100">
+              <button class="sub-menu__button">50/100</button>
+            </li>
+            <li class="sub-menu__item" data-item="100/200">
+              <button class="sub-menu__button">100/200</button>
+            </li>
+            <li class="sub-menu__item" data-item="250/500">
+              <button class="sub-menu__button">250/500</button>
+            </li>
+            <li class="sub-menu__item" data-item="500/1000">
+              <button class="sub-menu__button">500/1000</button>
+            </li>
+          </ul>
+        </div>
+        <div class="count-money">Доступно средств: <span class="money"></span></div>
+        <div class="slider">
+          <input class="slider__input num-input" type="number" value="0" min="0" max="100" step="1" aria-label="Установить взнос">
+          <button class="slider__minus" aria-label="Уменьшить взнос"><svg class= version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 5" width="20" height="5"><style>.s0{fill:#ffffff}</style><path class="s0" d="m0 5v-4h20v4z" /></svg></button>
+          <div class="slider__slider">
+            <div class="slider__line"></div>
+            <input class="slider__range" type="range" value="0" min="0" max="100" step="1" aria-label="Установить взнос">
+            <div class="slider__round"><img src="./img/ellipse.png" alt="Ползунок"></div>
+          </div>
+          <button class="slider__plus" aria-label="Увеличить взнос"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20"><style>.s0{fill:#ffffff}</style><path class="s0" d="m20 8v4h-8v8h-4v-8h-8v-4h8v-8h4v8z" /></svg></button>
+        </div>
+        <div class="left-buttons">
+          <button class="main-button left-button bt-min">Min</button>
+          <button class="main-button left-button bt-max">Max</button>
+          <button class="main-button left-button bt-bank">Bank</button>
+          <button class="main-button left-button bt-half">1/2 Bank</button>
+        </div>
+        <div class="left-desc">Ваш входной взнос не может быть меньше суммы, с которой вы покинули данный стол. Нажмите кнопку ОК, чтобы продолжить, или подождите, когда пройдет время ограничения.</div>
+        <button class="main-button left-bottom-button">
+          Быстрая посадка и автодокупка<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 23" width="13" height="23"><style>.s0{fill:#ffffff}</style><path class="s0" d="m3.1 23h-3.1l10-11.5l-10-11.5h3.1l9.9 11.5z" /></svg>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 23" width="13" height="23"><style>.s0{fill:#ffffff}</style><path class="s0" d="m3.1 23h-3.1l10-11.5l-10-11.5h3.1l9.9 11.5z" /></svg>
+        </button>
+      </section>
+      <div class="middle-line"></div>
+      <section class="right">
+        <div class="check-top"> 
+          <label class="checkbox">
+            <input type="checkbox" name="fast">
+            <div>Быстрая посадка</div>
+          </label>
+          <div class="info-button" data-tooltip="Быстрая посадка за случайный стол без выбора">i</div>
+        </div>
+        <div class="input-top"> 
+          <div class="input-top__text">Автоматически<br>ставить на стол:</div>
+          <input class="input-top__input num-input" type="number" min="0" step="1" aria-label="Сколько автоматически ставить на стол">
+          <div class="input-top__text">ББ</div>
+        </div>
+        <div class="check-middle">
+          <label class="checkbox">
+            <input type="checkbox" name="fast">
+            <div>Автодокупка</div>
+          </label>
+          <div class="info-button" data-tooltip="Автоматическое пополнение вашего банка во время игры">i</div>
+        </div>
+        <div class="right-desc">Я хочу пользоваться функцией <br> автоматической докупки и понимаю, что она будет автоматически пополнять мой счет для обеспечения заданого номера стека.</div>
+        <div class="input-middle"> 
+          <div class="input-middle__text">Если у меня меньше:</div>
+          <input class="input-middle__input num-input" type="number" min="0" step="1" aria-label="Если у меня меньше">
+          <div class="input-middle__text">ББ</div>
+        </div>
+        <div class="input-bottom"> 
+          <div class="input-bottom__text">Автоматически докупать до:</div>
+          <input class="input-bottom__input num-input" type="number" min="0" step="1" aria-label="Автоматически докупать до">
+          <div class="input-bottom__text">ББ</div>
+        </div>
+        <div class="check-bottom"> 
+          <label class="checkbox">
+            <input type="checkbox" name="fast">
+            <div>Сохранить настройки после<br>выхода из приложения</div>
+          </label>
+          <div class="info-button" data-tooltip="Настройки игры будут сохранены даже при выходе">i</div>
+        </div>
+      </section>
+      <section class="bottom">
+        <button class="main-button bottom-button">Ok</button>
+        <button class="main-button bottom-button">Cashier</button>
+        <button class="main-button bottom-button">Cancel </button>
+      </section>
+    </div>
+    <script src="./js/index.min.js?_v=20220130195141"> </script>
+  </body>
+</html>
