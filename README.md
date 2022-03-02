@@ -1,1 +1,1 @@
-## Vanilla.JS, PUG, SCSS, Webpack
+## Vanilla.JS, PUG, SCSS, Gulp
